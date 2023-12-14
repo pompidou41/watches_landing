@@ -19,6 +19,7 @@ function Layout({ title, children, user }) {
           integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
           crossOrigin="anonymous"
         />
+      
       </head>
       <body>
         <Header />
