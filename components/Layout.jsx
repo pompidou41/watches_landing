@@ -1,8 +1,6 @@
 const React = require('react');
-const Header = require('./Header');
-const Footer = require('./Footer');
 
-function Layout({ title, children, user }) {
+function Layout({ title, children }) {
   return (
     <html lang="ru">
       <head>
@@ -20,12 +18,9 @@ function Layout({ title, children, user }) {
           crossOrigin="anonymous"
         />
         <script defer src="/scripts/addUser.js" />
+        <script defer src="/scripts/auth.js" />
       </head>
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
