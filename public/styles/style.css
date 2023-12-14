@@ -1,8 +1,115 @@
-.container {
-    border: 2px solid black;
-    width: 100%;
-    min-height: 200px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.container {
+  border: 2px solid black;
+  width: 100%;
+  min-height: 200px;
+}
+
+.greeting {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.background-video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-260%, 20%);
+  text-align: center;
+  color: white;
+}
+
+.companyName {
+  font-family: 'Ghea News';
+  font-size: 3.5rem;
+  margin-bottom: 5px;
+}
+
+.company {
+  font-family: 'Ghea News';
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.slogan {
+  font-family: 'Noyh Medium';
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.learnMore {
+  margin-top: 18px;
+  font-family: 'Noyh Medium';
+  font-size: 19px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learnMore:hover {
+  background-color: #cccccc;
+}
+
+.information {
+  display: flex;
+  height: 450px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 50px;
+}
+
+.text-container {
+  width: 45%;
+}
+
+.section-title {
+  font-family: 'Ghea News';
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  top: 50%;
+  left: 50%;
+
+  text-align: center;
+  color: white;
+}
+
+.about-us-text {
+  font-family: 'Noyh Medium';
+  font-size: 1.5rem;
+  top: 50%;
+  left: 50%;
+
+  text-align: center;
+  color: white;
+}
+
+.image-container {
+  width: 30%;
+}
+
+.company-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(152, 151, 151, 0.1);
 
 .contacts-form * {
     display: flex;

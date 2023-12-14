@@ -4,17 +4,21 @@ const Greeting = require('./Greeting');
 const CarouselWatches = require('./CarouselWatches');
 const CarouselClients = require('./CarouselClients');
 const Contacts = require('./Contacts');
+const Information = require('./Information');
 
 function MainPage() {
   return (
     <Layout>
-      <div className="container greeting">
+      <div className='greeting'>
         <Greeting />
       </div>
-      <div className="container watches">
+      <div className='information'>
+        <Information />
+      </div>
+      <div className='container watches'>
         <CarouselWatches />
       </div>
-      <div className="container clients">
+      <div className='container clients'>
         <CarouselClients />
       </div>
       <div className="contacts">
