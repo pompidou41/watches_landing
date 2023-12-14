@@ -2,13 +2,40 @@ const React = require('react');
 
 function Contacts() {
   return (
-    <div className="contacts-form">
-      <form id="addUserForm">
-        <input name="name" type="text" placeholder="Ваше имя" />
-        <input name="email" type="email" placeholder="Ваша электронная почта" />
-        <input name="phone" type="phone" placeholder="Ваш номер телефона" />
-        <input name="img" type="text" placeholder="Ссылка на ваш эскиз" />
-        <button className="addUserBtn" type="submit">
+    <div className='contacts-form'>
+      <div className='image-container'>
+        <img
+          className='company-image'
+          src='https://watchbox-sfcc.imgix.net/home/11-29-23-hpg-collecting-together/Third+mod/11-24-23+Thrid+mod.jpg?auto=format,compress&cs=srgb&usm=5&usmrad=5&vib=5&h=600'
+          alt='Компания TimeCraft'
+        />
+      </div>
+      <form id='addUserForm'>
+        <input
+          className='input-field'
+          name='name'
+          type='text'
+          placeholder='Ваше имя'
+        />
+        <input
+          className='input-field'
+          name='email'
+          type='email'
+          placeholder='Ваша электронная почта'
+        />
+        <input
+          className='input-field'
+          name='phone'
+          type='phone'
+          placeholder='Ваш номер телефона'
+        />
+        <input
+          className='input-field'
+          name='img'
+          type='text'
+          placeholder='Ссылка на ваш эскиз'
+        />
+        <button className='addUserBtn' type='submit'>
           Отправить
         </button>
       </form>
