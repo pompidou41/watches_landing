@@ -1,12 +1,13 @@
-const React = require("react");
-const WatchesCard = require("../components/WatchesCard");
+const React = require('react');
+const WatchesCard = require('./WatchesCard');
+const AddWatchesForm = require('./AddWatchesForm');
 
-function CarouselWatches({ watches }) {
+function CarouselWatches({ user, watches }) {
   return (
     <>
-      <button className="add-watches">Добавить часы</button>
-      <div className="carousel">
-        <div className="carousel-inner">
+      {user && <AddWatchesForm />}
+      <div className='carousel'>
+        <div className='carousel-inner'>
           {watches.map((watchesOne) => (
             <WatchesCard watchesOne={watchesOne} />
           ))}

@@ -1,13 +1,13 @@
-const React = require("react");
+const React = require('react');
 
 function AddWatchesForm() {
   return (
     <div>
-      <form id="addWatches">
-        <input type="text" name="name" />
-        <input type="number" name="price" />
-        <input type="text" name="img" />
-        <button type="submit">Добавить</button>
+      <form id='addWatches'>
+        <input type='text' name='name' />
+        <input type='text' name='price' />
+        <input type='text' name='img' />
+        <button type='submit'>Добавить</button>
       </form>
     </div>
   );
