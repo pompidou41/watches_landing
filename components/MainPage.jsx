@@ -21,7 +21,7 @@ function MainPage() {
       <div className='container clients'>
         <CarouselClients />
       </div>
-      <div className='container contacts'>
+      <div className="contacts">
         <Contacts />
       </div>
     </Layout>
