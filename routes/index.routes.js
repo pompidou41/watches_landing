@@ -1,7 +1,15 @@
 const router = require("express").Router();
 
-const mainRoutes = require("./view/main.routes");
+const mainRoutes = require('./view/main.routes');
+const adminRoutes = require('./view/admin.routes');
 
-router.use("/", mainRoutes);
+const apiMainRoutes = require('./api/main.routes');
+const apiAdminRoutes = require('./api/admin.routes');
+
+router.use('/', mainRoutes);
+router.use('/admin', adminRoutes);
+
+router.use('/', apiMainRoutes);
+router.use('/api/admin', apiAdminRoutes);
 
 module.exports = router;
