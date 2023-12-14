@@ -2,7 +2,7 @@ const React = require("react");
 
 function WatchesCard({ watchesOne }) {
   return (
-    <div>
+    <div className="carousel-card">
       <img
         src={watchesOne.img}
         alt="фото крутых часов"

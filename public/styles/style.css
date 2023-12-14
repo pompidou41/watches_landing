@@ -1,5 +1,11 @@
-.container{
-    border: 2px solid black;
-    width: 100%;
-    min-height: 200px;
+.container {
+  border: 2px solid black;
+  width: 100%;
+  min-height: 200px;
+}
+
+/* cтили для карусели часов */
+.carousel-inner {
+  display: flex;
+  justify-content: space-around;
 }

@@ -1,12 +1,13 @@
-const React = require('react');
-const Header = require('./Header');
-const Footer = require('./Footer');
+const React = require("react");
+const Header = require("./Header");
+const Footer = require("./Footer");
 
 function Layout({ title, children, user }) {
   return (
     <html lang="ru">
       <head>
         <title>{title}</title>
+
         <link rel="stylesheet" href="/styles/style.css" />
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -19,6 +20,7 @@ function Layout({ title, children, user }) {
           integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
           crossOrigin="anonymous"
         />
+        <script defer src="/scripts/addWatches.js" />
       </head>
       <body>
         <Header />

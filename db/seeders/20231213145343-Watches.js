@@ -27,6 +27,27 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: "Giga-watches",
+          price: 4000,
+          img: "https://images.unsplash.com/photo-1612042850052-22573fcd0bad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzR8fHdhdGNoZXN8ZW58MHx8MHx8fDA%3D",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Beta-watches",
+          price: 2000,
+          img: "https://images.unsplash.com/photo-1615860756652-d1efbcb5d784?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI3fHx3YXRjaGVzfGVufDB8fDB8fHww",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Trex-watches",
+          price: 3000,
+          img: "https://images.unsplash.com/photo-1618151443723-e2c62836c7fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM5fHx3YXRjaGVzfGVufDB8fDB8fHww",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
