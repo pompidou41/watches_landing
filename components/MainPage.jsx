@@ -6,18 +6,22 @@ const CarouselClients = require('./CarouselClients');
 const Contacts = require('./Contacts');
 const Header = require('./Header');
 const Footer = require('./Footer');
+const Information = require('./Information');
 
 function MainPage({ user }) {
   return (
     <Layout user={user}>
       <Header user={user} />
-      <div className="container greeting">
+      <div className="greeting">
         <Greeting />
       </div>
-      <div className="container watches">
+      <div className='information'>
+        <Information />
+      </div>
+      <div className='container watches'>
         <CarouselWatches />
       </div>
-      <div className="container clients">
+      <div className='container clients'>
         <CarouselClients />
       </div>
       <div className="contacts">
