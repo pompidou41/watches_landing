@@ -1,4 +1,4 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
 const mainRoutes = require('./view/main.routes');
 const adminRoutes = require('./view/admin.routes');

@@ -17,11 +17,17 @@
 .adminForm  * {
     margin: 5px 10px;
     width: 15vw;
+}
   
 .container {
   border: 2px solid black;
   width: 100%;
   min-height: 200px;
+}
+
+.carousel-inner {
+  display: flex;
+  justify-content: space-around;
 }
 
 .greeting {
@@ -101,7 +107,6 @@
   margin-bottom: 15px;
   top: 50%;
   left: 50%;
-
   text-align: center;
   color: white;
 }
@@ -111,7 +116,6 @@
   font-size: 1.5rem;
   top: 50%;
   left: 50%;
-
   text-align: center;
   color: white;
 }
@@ -124,6 +128,7 @@
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(152, 151, 151, 0.1);
+}
 
 .contacts-form * {
     display: flex;
