@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Header() {
+function Header({ user }) {
   return (
     <ul className="nav nav-tabs">
       <li className="nav-item">
@@ -23,6 +23,14 @@ function Header() {
           Contact us
         </a>
       </li>
+      {user && (
+        <li className="nav-item">
+          <p>{user.login}</p>
+          <a className="nav-link" href="/logout">
+            logout
+          </a>
+        </li>
+      )}
     </ul>
   );
 }

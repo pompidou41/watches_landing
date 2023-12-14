@@ -6,4 +6,10 @@ router.get('/', (req, res) => {
   res.send(main);
 });
 
+router.get('/logout', async (req, res) => {
+  res.locals = undefined;
+  res.clearCookie('access').clearCookie('refresh');
+  res.redirect('/');
+});
+
 module.exports = router;

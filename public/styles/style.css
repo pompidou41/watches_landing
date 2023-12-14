@@ -2,8 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+}
+.adminContainer {
+    margin-top: 30vh;
 }
 
+.adminContainer * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adminForm  * {
+    margin: 5px 10px;
+    width: 15vw;
+  
 .container {
   border: 2px solid black;
   width: 100%;
