@@ -1,7 +1,15 @@
 const router = require('express').Router();
 const WatchesCard = require('../../components/WatchesCard');
 const { User, Watches } = require('../../db/models');
+const nodemailer = require('nodemailer');
 
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'kiryanova.ad@gmail.com',
+    pass: 'yqrs cobr tkle zlfw',
+  },
+});
 router.post('/', async (req, res) => {
   const inputData = req.body;
   try {
@@ -26,6 +34,20 @@ router.post('/', async (req, res) => {
     // создание нового пользователя в листе ожидания
     const newUser = await User.create(inputData);
     if (newUser) {
+      const mailOptions = {
+        from: 'kiryanova.ad@gmail.com',
+        to: inputData.email,
+        subject: 'Заявка получена',
+        text: `${inputData.name}, Ваша заявка получена. С вами свяжутся в ближайшее время, чтобы уточнить все детали. Спасибо за вашу заявку!`,
+      };
+
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
       res.status(200).json({ success: true });
     }
   } catch ({ message }) {
