@@ -21,11 +21,14 @@ function Layout({ title, children }) {
           integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM'
           crossOrigin='anonymous'
         />
+            
         <script defer src='/scripts/addWatches.js' />
         <script defer src='/scripts/addUser.js' />
         <script defer src='/scripts/auth.js' />
+        <script defer src="/scripts/getWatches.js" />
         <script defer src='/scripts/deleteWatches.js' />
         <script defer src='/scripts/updateWatches.js' />
+
       </head>
       <body>{children}</body>
     </html>

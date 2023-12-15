@@ -1,6 +1,6 @@
-const router = require("express").Router();
-const MainPage = require("../../components/MainPage");
-const { Watches } = require("../../db/models");
+const router = require('express').Router();
+const MainPage = require('../../components/MainPage');
+const { Watches } = require('../../db/models');
 
 router.get('/', async (req, res) => {
   const watches = await Watches.findAll();
