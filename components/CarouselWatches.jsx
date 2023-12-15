@@ -9,7 +9,7 @@ function CarouselWatches({ user, watches }) {
       <div className='carousel'>
         <div className='carousel-inner'>
           {watches.map((watchesOne) => (
-            <WatchesCard watchesOne={watchesOne} />
+            <WatchesCard watchesOne={watchesOne} user={user} />
           ))}
         </div>
       </div>
