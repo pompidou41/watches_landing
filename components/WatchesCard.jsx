@@ -1,6 +1,5 @@
 const React = require('react');
 const UpdateWatchesForm = require('./UpdateWatchesForm');
-const BtnDeleteWatches = require('./BtnDeleteWatches');
 
 function WatchesCard({ user, watchesOne }) {
   return (
@@ -13,7 +12,7 @@ function WatchesCard({ user, watchesOne }) {
       <h3 className='watchesName'>{watchesOne.name}</h3>
       <h2 className='watchesPrice'>{watchesOne.price}$</h2>
       {user && <UpdateWatchesForm watchesOne={watchesOne} />}
-      {user && <BtnDeleteWatches />}
+      {user && <button className='deleteBtn'>Удалить</button>}
     </div>
   );
 }
