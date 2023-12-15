@@ -4,7 +4,6 @@
     "password": "admin",
     "database": "watches_landing",
     "host": "127.0.0.1",
-    "port": 5433,
     "dialect": "postgres"
   }
 }

@@ -1,7 +1,7 @@
 const router = require('express').Router();
+const nodemailer = require('nodemailer');
 const WatchesCard = require('../../components/WatchesCard');
 const { User, Watches } = require('../../db/models');
-const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -45,7 +45,7 @@ router.post('/', async (req, res) => {
         if (error) {
           console.log(error);
         } else {
-          console.log('Email sent: ' + info.response);
+          console.log(`Email sent: ${info.response}`);
         }
       });
       res.status(200).json({ success: true });
@@ -69,13 +69,13 @@ router.post('/api', async (req, res) => {
       res.json({ message: 'success', html });
     }
   } catch ({ message }) {
-    res.status(500).json(message);
+    console.log(message);
   }
 });
 
-router.delete('/:watchesId', async (req, res) => {
+router.delete('/delete/:watchesId', async (req, res) => {
   const { watchesId } = req.params;
-  const data = await User.destroy({ where: { id: watchesId } });
+  const data = await Watches.destroy({ where: { id: watchesId } });
   if (data > 0) {
     res.json({ message: 'success' });
   }
