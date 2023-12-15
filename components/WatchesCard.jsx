@@ -1,6 +1,8 @@
 const React = require('react');
+const UpdateWatchesForm = require('./UpdateWatchesForm');
+const BtnDeleteWatches = require('./BtnDeleteWatches');
 
-function WatchesCard({ watchesOne }) {
+function WatchesCard({ user, watchesOne }) {
   return (
     <div className='carousel-card swiper-slide' data-watchesid={watchesOne.id}>
       <img
@@ -10,8 +12,8 @@ function WatchesCard({ watchesOne }) {
       />
       <h3 className='watchesName'>{watchesOne.name}</h3>
       <h2 className='watchesPrice'>{watchesOne.price}$</h2>
-      <button className='updateBtn'>Изменить</button>
-      <button className='deleteBtn'>Удалить</button>
+      {user && <UpdateWatchesForm watchesOne={watchesOne} />}
+      {user && <BtnDeleteWatches />}
     </div>
   );
 }

@@ -12,7 +12,7 @@ function MainPage({ user, watches }) {
   return (
     <Layout user={user}>
       <Header user={user} />
-      <div className='greeting'>
+      <div className="greeting">
         <Greeting />
       </div>
       <div>
@@ -21,10 +21,10 @@ function MainPage({ user, watches }) {
       <div className='watches'>
         <CarouselWatches user={user} watches={watches} />
       </div>
-      <div className='container clients'>
+      <div className="container clients">
         <CarouselClients />
       </div>
-      <div className='contacts'>
+      <div className="contacts">
         <Contacts />
       </div>
       <Footer />

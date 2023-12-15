@@ -7,9 +7,36 @@ function AdminPage({ user }) {
       {user ? (
         <div className="adminContainer">
           <p>{user.login}</p>
-          <a className="nav-link" href="/logout">
-            <button style={{ margin: 'auto' }}>logout</button>
+          <a href="/logout">
+            <button style={{ margin: 'auto' }} type="button">
+              logout
+            </button>
           </a>
+          <a href="/">
+            <button style={{ margin: 'auto' }} type="button">
+              homepage
+            </button>
+          </a>
+          <a className="downloadCSV" href="/api/getclients">
+            <button style={{ margin: 'auto' }} type="button">
+              download clients database
+            </button>
+          </a>
+          <form className="getWatchesForm">
+            <input type="text" name="id" placeholder="id (default all)" />
+            <input type="text" name="name" placeholder="name (default all)" />
+            <input
+              type="text"
+              name="pricemin"
+              placeholder="price min (default all)"
+            />
+            <input
+              type="text"
+              name="pricemax"
+              placeholder="price max (default all)"
+            />
+            <button type="submit">get watches database</button>
+          </form>
         </div>
       ) : (
         <div className="adminContainer">

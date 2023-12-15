@@ -9,7 +9,7 @@ function CarouselWatches({ user, watches }) {
       <div className='swiper-container'>
         <div className='swiper-wrapper'>
           {watches.map((watchesOne) => (
-            <WatchesCard watchesOne={watchesOne} />
+            <WatchesCard watchesOne={watchesOne} user={user} />
           ))}
         </div>
       </div>
