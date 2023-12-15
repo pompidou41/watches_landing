@@ -6,19 +6,18 @@ function CarouselWatches({ user, watches }) {
   return (
     <>
       {user && <AddWatchesForm />}
-      <div className='swiper-container'>
-        <div className='swiper-wrapper'>
+      <div className="swiper-container" id="watchesPage">
+        <div className="swiper-wrapper">
           {watches.map((watchesOne) => (
             <WatchesCard watchesOne={watchesOne} user={user} />
           ))}
         </div>
       </div>
 
-      <script src='https://unpkg.com/swiper/swiper-bundle.min.js' />
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js" />
 
-      <div className='carousel'>
-        <div className='carousel-inner'>
-         </div>
+      <div className="carousel">
+        <div className="carousel-inner"></div>
       </div>
     </>
   );

@@ -3,8 +3,13 @@ const React = require('react');
 function Header({ user }) {
   return (
     <ul className="nav nav-tabs">
+      <img
+        className="nav-icon"
+        src="https://cdn-icons-png.flaticon.com/512/3876/3876985.png"
+        alt="..."
+      />
       <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="#informationPage">
+        <a className="nav-link" aria-current="page" href="#informationPage">
           About us
         </a>
       </li>

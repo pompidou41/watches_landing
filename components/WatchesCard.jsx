@@ -1,19 +1,20 @@
 const React = require('react');
 const UpdateWatchesForm = require('./UpdateWatchesForm');
-const BtnDeleteWatches = require('./BtnDeleteWatches');
 
 function WatchesCard({ user, watchesOne }) {
   return (
-    <div className='carousel-card swiper-slide' data-watchesid={watchesOne.id}>
-      <img
-        src={watchesOne.img}
-        alt='фото крутых часов'
-        style={{ width: '350px', height: '500px' }}
-      />
+    <div
+      className='carousel-card swiper-slide'
+      id='card-quadratus'
+      data-watchesid={watchesOne.id}
+    >
+      <div className='divImg'>
+        <img className='imgQ' src={watchesOne.img} alt='фото крутых часов' />
+      </div>
       <h3 className='watchesName'>{watchesOne.name}</h3>
       <h2 className='watchesPrice'>{watchesOne.price}$</h2>
       {user && <UpdateWatchesForm watchesOne={watchesOne} />}
-      {user && <BtnDeleteWatches />}
+      {user && <button className='deleteBtn'>Удалить</button>}
     </div>
   );
 }

@@ -83,19 +83,14 @@ router.delete('/delete/:watchesId', async (req, res) => {
 
 router.put('/update/:watchesId', async (req, res) => {
   const { watchesId } = req.params;
-  console.log(req.params);
+
   const data = req.body;
-  console.log(data, 'rrr');
+
   try {
     const result = await Watches.update(data, { where: { id: watchesId } });
-    const html = res.renderComponent(
-      WatchesCard,
-      { watchesOne: data },
-      { doctype: false }
-    );
-    console.log(html);
+
     if (result[0] > 0) {
-      res.json({ message: 'success', html });
+      return res.json({ message: 'success' });
     }
   } catch ({ error }) {
     console.log(error);

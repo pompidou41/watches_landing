@@ -21,11 +21,7 @@ formUpdates.forEach((formUpdate) => {
       const data = await res.json();
       console.log(data);
       if (data.message === 'success') {
-        const input1 = formUpdate.querySelectorAll('.input1');
-        const input2 = formUpdate.querySelectorAll('.input2');
-        const input3 = formUpdate.querySelectorAll('.input3');
-        const d = data.html;
-        formUpdate.insertAdjacentHTML('beforeend', d.name);
+        window.location.assign('/');
       }
     });
   }
