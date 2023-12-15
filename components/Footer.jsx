@@ -14,20 +14,23 @@ function Footer() {
               name='email'
               placeholder='Введите ваш email'
             />
-            <button className='subscribeBtn' type='submit'>Подписаться</button>
+            <button className='subscribeBtn' type='submit'>
+              Подписаться
+            </button>
           </form>
+          <div className='forSubscriber'></div>
         </div>
         <div className='col-md-4'>
           <h4>EXPLORE</h4>
           <ul className='ul'>
             <li>
-              <a href='#'>All WATCHES</a>
+              <a href='#watchesPage'>All WATCHES</a>
             </li>
             <li>
-              <a href='#'>ABOUT US</a>
+              <a href='#informationPage'>ABOUT US</a>
             </li>
             <li>
-              <a href='#'>CONNECT</a>
+              <a href='#applicationForPurchase'>BUY</a>
             </li>
           </ul>
         </div>
@@ -35,13 +38,13 @@ function Footer() {
           <h4>CONNECT</h4>
           <ul className='ul'>
             <li>
-              <a href='#'>EMAIL US</a>
+              <a href='mailto:kiryanova.ad@gmail.com'>EMAIL US</a>
             </li>
             <li>
-              <a href='#'>YOUTUBE</a>
+              <a href='https://www.youtube.com/c/WatchBoxStudios'>YOUTUBE</a>
             </li>
             <li>
-              <a href='#'>INSTAGRAM</a>
+              <a href='https://www.instagram.com/watchbox/'>INSTAGRAM</a>
             </li>
           </ul>
         </div>

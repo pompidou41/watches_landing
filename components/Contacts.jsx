@@ -2,7 +2,7 @@ const React = require('react');
 
 function Contacts() {
   return (
-    <div className='contacts-form'>
+    <div className='contacts-form' id='applicationForPurchase'>
       <div className='image-container'>
         <img
           className='company-image'

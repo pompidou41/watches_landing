@@ -2,7 +2,7 @@ const React = require('react');
 
 function Greeting() {
   return (
-    <div className='greeting'>
+    <div className='greeting' id='greetinsPage'>
       <video className='background-video' autoPlay loop muted>
         <source
           src='https://watchbox-sfcc.imgix.net/WatchBox/Desktop/2023-10-12_1916_HP_Desktop.webm'
