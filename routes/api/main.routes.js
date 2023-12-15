@@ -1,7 +1,8 @@
 const router = require('express').Router();
+const nodemailer = require('nodemailer');
 const WatchesCard = require('../../components/WatchesCard');
 const { User, Watches } = require('../../db/models');
-const nodemailer = require('nodemailer');
+const Subscriber = require('../../db/models/subscriber');
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -45,7 +46,7 @@ router.post('/', async (req, res) => {
         if (error) {
           console.log(error);
         } else {
-          console.log('Email sent: ' + info.response);
+          console.log(`Email sent: ${info.response}`);
         }
       });
       res.status(200).json({ success: true });
@@ -78,6 +79,42 @@ router.delete('/:watchesId', async (req, res) => {
   const data = await User.destroy({ where: { id: watchesId } });
   if (data > 0) {
     res.json({ message: 'success' });
+  }
+});
+
+router.post('/', async (req, res) => {
+  const inputData = req.body;
+  try {
+    const checkUseMail = await Subscriber.findOne({
+      where: { mail: inputData.mail },
+    });
+    if (checkUseMail) {
+      res
+        .status(400)
+        .json({ message: 'Данная электронная почта уже в листе ожидания!' });
+    }
+
+    const newUser = await Subscriber.create(inputData);
+    if (newUser) {
+      const mailOptions = {
+        from: 'kiryanova.ad@gmail.com',
+        to: inputData.email,
+        subject: 'Заявка получена',
+        text: `${inputData.name}, Cпасибо за ваше доверие! Предлагаем вам ознакомиться со статьями, которые введут вас в мир часов. Приятного погружения! https://www.thewatchbox.com/categories/buying-guides/`,
+      };
+
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log(`Email sent: ${info.response}`);
+        }
+      });
+      res.status(200).json({ success: true });
+    }
+  } catch ({ message }) {
+    console.log({ message });
+    res.status(500).json({ message: 'Ошибка создания пользователя' });
   }
 });
 

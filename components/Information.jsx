@@ -2,7 +2,7 @@ const React = require('React');
 
 function Information() {
   return (
-    <div className='information'>
+    <div className='information' id='informationPage'>
       <div className='text-container'>
         <h2 className='section-title'>О нас</h2>
         <p className='about-us-text'>

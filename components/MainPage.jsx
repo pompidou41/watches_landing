@@ -15,10 +15,10 @@ function MainPage({ user, watches }) {
       <div className='greeting'>
         <Greeting />
       </div>
-      <div className='information'>
+      <div>
         <Information />
       </div>
-      <div className='container watches'>
+      <div className='watches'>
         <CarouselWatches user={user} watches={watches} />
       </div>
       <div className='container clients'>

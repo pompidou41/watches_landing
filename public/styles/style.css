@@ -2,23 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 .adminContainer {
-    margin-top: 30vh;
+  margin-top: 30vh;
 }
 
 .adminContainer * {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.adminForm  * {
-    margin: 5px 10px;
-    width: 15vw;
+.adminForm * {
+  margin: 5px 10px;
+  width: 15vw;
 }
-  
+
 .container {
   border: 2px solid black;
   width: 100%;
@@ -94,6 +93,7 @@
   align-items: center;
   background-color: #000000;
   padding: 50px;
+  margin-bottom: 40px;
 }
 
 .text-container {
@@ -209,13 +209,13 @@ footer {
 }
 
 .subscribeInput {
-    width: 350px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+  width: 350px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .subscribeBtn {
-background-color: #007bff;
+  background-color: #007bff;
   color: #ffffff;
   width: 125px;
   border: none;
@@ -223,4 +223,35 @@ background-color: #007bff;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   cursor: pointer;
+}
+
+.carousel-card {
+  font-family: 'Noyh Medium';
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.watchesName {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.watchesPrice {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.swiper-container {
+  width: 25%;
+  margin: 20px auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  padding: 40px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
