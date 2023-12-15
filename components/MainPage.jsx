@@ -14,6 +14,7 @@ function MainPage({ user, watches }) {
       <Header user={user} />
       <div className="greeting">
         <Greeting />
+        </div>
       <div className='information'>
         <Information />
       </div>
