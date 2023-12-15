@@ -15,11 +15,6 @@ function CarouselWatches({ user, watches }) {
       </div>
 
       <script src='https://unpkg.com/swiper/swiper-bundle.min.js' />
-
-      <div className='carousel'>
-        <div className='carousel-inner'>
-         </div>
-      </div>
     </>
   );
 }
