@@ -25,7 +25,7 @@ function Header({ user }) {
       </li>
       {user && (
         <li className="nav-item">
-          <p>{user.login}</p>
+          <a href="/admin">{user.login}</a>
           <a className="nav-link" href="/logout">
             logout
           </a>
