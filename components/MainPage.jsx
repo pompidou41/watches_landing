@@ -21,9 +21,6 @@ function MainPage({ user, watches }) {
       <div className='watches'>
         <CarouselWatches user={user} watches={watches} />
       </div>
-      <div className="container clients">
-        <CarouselClients />
-      </div>
       <div className="contacts">
         <Contacts />
       </div>

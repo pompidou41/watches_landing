@@ -31,9 +31,9 @@ function Layout({ title, children }) {
         <script defer src="/scripts/addUser.js" />
         <script defer src="/scripts/auth.js" />
         <script defer src="/scripts/getWatches.js" />
-        <script defer src="/scripts/deleteWatches.js" />
-        <script defer src="/scripts/updateWatches.js" />
-        <script defer src="/scripts/addSubscriber.js" />
+        <script defer src='/scripts/deleteWatches.js' />
+        <script defer src='/scripts/updateWatches.js' />
+
       </head>
       <body>{children}</body>
     </html>

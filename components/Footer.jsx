@@ -5,8 +5,11 @@ function Footer() {
     <footer id='footer'>
       <div className='row'>
         <div className='col-md-4'>
-          <h4>ENDLESS DISCOVERY IN YOUR INBOX</h4>
-
+          <h4 className='discovery'>ENDLESS DISCOVERY IN YOUR INBOX</h4>
+          <h5 className='textRT'>
+            Присоединяйся к нам, чтобы быть в курсе последних коллекций и
+            участовать в закрытых распродажах
+          </h5>
           <form className='formSubscribe'>
             <input
               className='subscribeInput'
@@ -18,19 +21,25 @@ function Footer() {
               Подписаться
             </button>
           </form>
-          <div className='forSubscriber'></div>
+          <div className='forSubscriber' />
         </div>
         <div className='col-md-4'>
           <h4>EXPLORE</h4>
           <ul className='ul'>
             <li>
-              <a href='#watchesPage'>All WATCHES</a>
+              <button className='footerBtn'>
+                <a href='#watchesPage'>All WATCHES</a>
+              </button>
             </li>
             <li>
-              <a href='#informationPage'>ABOUT US</a>
+              <button className='footerBtn'>
+                <a href='#informationPage'>ABOUT US</a>
+              </button>
             </li>
             <li>
-              <a href='#applicationForPurchase'>BUY</a>
+              <button className='footerBtn'>
+                <a href='#applicationForPurchase'>BUY</a>
+              </button>
             </li>
           </ul>
         </div>
@@ -38,19 +47,23 @@ function Footer() {
           <h4>CONNECT</h4>
           <ul className='ul'>
             <li>
-              <a href='mailto:kiryanova.ad@gmail.com'>EMAIL US</a>
+              <button className='footerBtn'>
+                <a href='mailto:kiryanova.ad@gmail.com'>EMAIL US</a>
+              </button>
             </li>
             <li>
-              <a href='https://www.youtube.com/c/WatchBoxStudios'>YOUTUBE</a>
+              <button className='footerBtn'>
+                <a href='https://www.youtube.com/c/WatchBoxStudios'>YOUTUBE</a>
+              </button>
             </li>
             <li>
-              <a href='https://www.instagram.com/watchbox/'>INSTAGRAM</a>
+              <button className='footerBtn'>
+                <a href='https://www.instagram.com/watchbox/'>INSTAGRAM</a>
+              </button>
             </li>
           </ul>
         </div>
       </div>
-
-      <p>© 2023</p>
     </footer>
   );
 }
