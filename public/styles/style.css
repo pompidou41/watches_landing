@@ -268,3 +268,20 @@ footer {
 .getWatchesForm input{
   width: 172px;
 }
+
+.nav-link {
+  font-family: 'Ghea News';
+  color:black !important;
+  background-color: white !important;
+  border-radius: 0 !important;
+}
+
+.nav-tabs {
+  justify-content: center;
+}
+
+.nav-icon{
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+}
