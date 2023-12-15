@@ -1,6 +1,7 @@
 const router = require('express').Router();
+const WatchesCard = require('../../components/WatchesCard');
+const { User, Watches } = require('../../db/models');
 const nodemailer = require('nodemailer');
-const { User } = require('../../db/models');
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -52,6 +53,31 @@ router.post('/', async (req, res) => {
   } catch ({ message }) {
     console.log({ message });
     res.status(500).json({ message: 'Ошибка создания пользователя' });
+  }
+});
+
+router.post('/api', async (req, res) => {
+  const data = req.body;
+  try {
+    const watches = await Watches.create(data);
+    const html = res.renderComponent(
+      WatchesCard,
+      { watchesOne: watches },
+      { doctype: false }
+    );
+    if (watches) {
+      res.json({ message: 'success', html });
+    }
+  } catch ({ message }) {
+    res.status(500).json(message);
+  }
+});
+
+router.delete('/:watchesId', async (req, res) => {
+  const { watchesId } = req.params;
+  const data = await User.destroy({ where: { id: watchesId } });
+  if (data > 0) {
+    res.json({ message: 'success' });
   }
 });
 
