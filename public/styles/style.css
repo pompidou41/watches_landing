@@ -2,7 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
+
+body {
+  background-color: #E8E8E8 !important
+}
+
 .adminContainer {
     width: 210px;
     margin: 30vh auto;
@@ -94,7 +100,8 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
+  background-color: #333;
+  ;
   padding: 50px;
   margin-bottom: 40px;
 }
@@ -144,8 +151,9 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: #edebe1;
+  background-color: #333;
   padding: 50px;
+  margin-bottom: 40px;
 }
 
 #addUserForm {
@@ -176,14 +184,14 @@
   background-color: #0056b3;
 }
 
-footer {
+#footer {
   text-align: center;
   font-size: 16px;
   line-height: 60px;
   padding: 20px;
   bottom: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #000000;
   color: #fff;
   height: 320px;
 }
@@ -209,12 +217,14 @@ footer {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  
 }
 
 .subscribeInput {
   width: 350px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  text-indent: 15px;
 }
 
 .subscribeBtn {
@@ -232,6 +242,8 @@ footer {
   font-family: 'Noyh Medium';
   font-size: 1.5rem;
   margin: 0;
+  border-radius: 20px;
+  box-shadow: 1000px 10px 10px rgba(152, 151, 151, 0.1) !important;
 }
 
 .watchesName {
@@ -248,15 +260,16 @@ footer {
 
 .swiper-container {
   width: 25%;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background-color: #f4f4f4;
+  box-shadow: 1000px 10px 10px rgba(152, 151, 151, 0.1) !important;
   padding: 40px 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.7px 7px rgba(0, 0, 0, 0.1) !important
 }
 .getWatchesForm {
   margin: 0 auto;
@@ -267,4 +280,34 @@ footer {
 
 .getWatchesForm input{
   width: 172px;
+}
+
+.footerBtn {
+  background-color: #efeded;
+  color: #ffffff;
+  border: none;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 150px;
+
+}
+
+.footerBtn a {
+  text-decoration: none;
+  color: #000000 !important
+}
+
+.carousel-card img {
+  border-radius: 20px
+}
+
+.discovery {
+  margin-bottom: 20px;
+}
+
+.textRT {
+  margin-bottom: 30px;
+  
 }
